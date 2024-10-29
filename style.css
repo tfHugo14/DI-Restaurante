@@ -22,27 +22,28 @@
 
 html{
     font-family: 'Aracne-Condensed', Georgia;
-    height: 100%;
     background-color: #02040f;
 }
 
 body{
     margin: 0;
-    height: 100%;
     width: 100%;
 }
 
-#header-background{
+header{
     width: 100%;
     height: 85vh;
-    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%), url(img/dishes/food2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#header-background{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 500ms ease-in-out;
+    opacity: 1;
 }
 
 #header-background div{
@@ -139,10 +140,58 @@ a:hover::before {
 
 main{
     width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 85%), url(img/bg1_wood.jpeg);
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(2,4,15,1) 0%, rgba(2,4,15,0) 20%), #02040F;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#welcome_wrapper{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(180deg, rgba(2,4,15,1) 0%, rgba(2,4,15,0) 200%), url(img/dishes/food4.jpg);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+#welcome{
+    margin: 40px 0 0 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    color: #E5DADA;
+    font-family: Georgia;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    box-sizing: border-box;
+}
+
+#welcome h2{
+    align-self: flex-start;
+    margin: 0 0 0 40px;
+    font-size: 3vw;
+}
+
+#welcome div{
+    width: 70%;
+    padding: 10px;
+}
+
+#welcome p{
+    margin: 40px 0 0 0;
+    font-size: 1.4vw;
+    line-height: 25px;
+}
+
+#welcome img{
+    height: 400px;
+    width: 400px;
 }
 
 /* footer */
@@ -179,7 +228,7 @@ div p{
 
 footer a{
     text-decoration: none;
-    font-size: large;
+    font-size: x-large;
     color: #fff;
 }
 
@@ -193,7 +242,7 @@ footer a::before {
     display: block;
     width: 100%;
     height: 2px;
-    bottom: -22px;
+    bottom: -24px;
     left: 0px;
     background-color: #840032;
     transform: scaleX(0);

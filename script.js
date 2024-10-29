@@ -1,23 +1,27 @@
 const images = [
-    'radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%), url(img/dishes/food11.jpg);',
-    'radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%), url(img/dishes/food10.jpg);',
-    'radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%), url(img/dishes/food9.jpg);',
-    'radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%), url(img/dishes/food2.jpg);'
-  ];
-  
-  // Select the background slider div
-  const header = document.getElementById("header-background");
-  
-  let currentIndex = 0;
-  
-  function changeBackgroundImage() {
+  'linear-gradient(0deg, rgba(2,4,15,1) 0%, rgba(2,4,15,0) 100%), url(img/dishes/food11.jpg)',
+  'linear-gradient(0deg, rgba(2,4,15,1) 0%, rgba(2,4,15,0) 100%), url(img/dishes/food10.jpg)',
+  'linear-gradient(0deg, rgba(2,4,15,1) 0%, rgba(2,4,15,0) 100%), url(img/dishes/food9.jpg)',
+  'linear-gradient(0deg, rgba(2,4,15,1) 0%, rgba(2,4,15,0) 100%), url(img/dishes/food2.jpg)'
+];
 
-    header.style.background = images[currentIndex];
+const header = document.getElementById("header-background");
 
-    currentIndex = (currentIndex + 1) % images.length;
-  }
-  
-  changeBackgroundImage();
-  
-  // Change image every 5 seconds
-  setInterval(changeBackgroundImage, 1000);
+let currentIndex = 0;
+
+function changeBackgroundImage() {
+  header.style.opacity = 0;
+
+  setTimeout(() => {
+      // Change when image dissapears
+      header.style.backgroundImage = images[currentIndex];
+      currentIndex = (currentIndex + 1) % images.length;
+
+      header.style.opacity = 1;
+  }, 400);
+}
+
+changeBackgroundImage();
+
+// Change image every 10 seconds
+setInterval(changeBackgroundImage, 10000);
