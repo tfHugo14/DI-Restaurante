@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>La Maison Viande</title>
-        <link rel="stylesheet" href="style.css">
     </head>
     <!-- https://www.gainsbourg.be/ -->
     <body>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- Home, Reserveer, Over Ons, Menu, Contact -->
         <header id="header-background">
-            <nav>
+            <nav id="navbar">
                 <ul>
                     <li><a class="active" href="#productos">Home</a></li>
                     <li><a href="#destacados">Reserveer</a></li>
@@ -20,33 +20,30 @@
                     <li><a href="#colabora">Contact</a></li>
                 </ul>              
             </nav>
-            <div>
-                <h1>La Maison Viande</h1>
+            <section>
+                <div>
+                    <h1>La Maison Viande</h1>
+                </div>
+                <div>
+                    <p class="fade-in-slide">
+                        En nuestro restaurante nos hemos enfocado en ingredientes frescos y técnicas artesanales, 
+                        cada plato a sido cuidadosamente reinterpretado para sorprender y deleitar el paladar.
+                    </p>
+
+                    <p class="fade-in-slide">
+                        Déjate llevar por el sabor y el arte de Flandes en cada bocado.
+                    </p>
+
+                    <button id="reservar" class="fade-in-slide"> Reservar </button>
+                </div>
             </div>
         </header>
-        <main>
+        <main id="main">
             <section id="welcome_wrapper">
                 <article id="welcome">
-                    <h2>Bienvenido a La Maison Viande</h2>  
-                    <div>
-                        <p>
-                        En nuestro restaurante, nos hemos centrado en crear un espacio para quienes aprecian el auténtico sabor de la carne de una calidad superior, 
-                        honrando las tradiciones culinarias de Flandes.
-                        </p>
-                        
-                        <p>
-                        Con un enfoque en ingredientes frescos y técnicas artesanales, cada plato es un homenaje a la rica herencia flamenca, 
-                        cuidadosamente reinterpretado para sorprender y deleitar el paladar.
-                        </p>
-                        
-                        <p>
-                        Desde cortes selectos hasta recetas tradicionales, 
-                        nos comprometemos a brindar una experiencia gastronómica inolvidable, en un ambiente que invita a disfrutar de cada momento.
-                        </p>
-                        
-                        <p>
-                        Déjate llevar por el sabor y el arte de Flandes en cada bocado.
-                        </p>
+                    <h2 id="fade-in"> </h2>  
+                    <div>     
+
                     </div>
                     <!-- 2 botones para reservar y contactarnos -->
                 </article>
@@ -54,7 +51,7 @@
 
             
         </main>
-        <footer>
+        <footer id="footer">
             <p id="copyright"> COPYRIGHT © 2024 by Hugo Tubio Ferreiro </p>
             <div> 
                 <a href="terminos_de_uso">Contactanos</a> 
