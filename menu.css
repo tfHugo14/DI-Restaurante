@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(0deg, rgba(2,4,15,1) 0%, rgba(2,4,15,0) 80%), url(img/dishes/food2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #E5DADA;
+}
+
+#carta{
+    background-color: #02040ff5;
+    height: 100%;
+    margin: 2% 8% 2% 8%;
+    border: 1px solid #E5DADA;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#carta h1{
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+    border-bottom: 1px solid #E5DADA;
+}
+
+#carta h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+#carta article{
+    width: 80%;
+}

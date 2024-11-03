@@ -3,21 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>La Maison Viande</title>
     </head>
     <!-- https://www.gainsbourg.be/ -->
     <body>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- Home, Reserveer, Over Ons, Menu, Contact -->
         <header id="header-background">
             <nav id="navbar">
                 <ul>
-                    <li><a class="active" href="#productos">Home</a></li>
-                    <li><a href="#destacados">Reserveer</a></li>
-                    <li><a href="#diseña_tu_vestido">Over Ons</a></li>
-                    <li><a href="#sobre_nosotros">Menu</a></li>
-                    <li><a href="#colabora">Contact</a></li>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#reservar">Reservar</a></li>
+                    <li><a href="#sobre_nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contactanos">Contactanos</a></li>
                 </ul>              
             </nav>
             <section>
@@ -34,27 +34,120 @@
                         Déjate llevar por el sabor y el arte de Flandes en cada bocado.
                     </p>
 
-                    <button id="reservar" class="fade-in-slide"> Reservar </button>
+                    <button id="btn_reservar" class="fade-in-slide"> Reservar </button>
                 </div>
             </div>
         </header>
         <main id="main">
-            <section id="welcome_wrapper">
-                <article id="welcome">
-                    <h2 id="fade-in"> </h2>  
-                    <div>     
 
-                    </div>
-                    <!-- 2 botones para reservar y contactarnos -->
+            <section id="menu">
+                <h2>Conoce nuestra carta</h2>
+                <div>
+                    <article id="drinks">
+                        <a href="./menu.html">
+                            <div class="article_content">
+                                <p>Bebidas</p> 
+                            </div>
+                        </a>
+                    </article>
+                    <article id="our_menu"> 
+                        <a href="./menu.html">
+                            <div class="article_content">
+                                <p>Menu</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article id="desserts"> 
+                        <a href="./menu.html">
+                            <div class="article_content">
+                                <p>Postres</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="localization">
+                <article>
+                    <h2> Contáctanos </h2>
+                    <p> <a href=""> <i class="fas fa-phone-alt"></i> 988 75 65 43 </a> </p>
+                    <p> <a href=""> <i class="fas fa-envelope"></i> lamaisonviande@gmail.com </a> </p>
+                </article>
+
+                <article>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.5604221309136!2d4.7065456999999995!3d50.876337199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c160d6238ae49f%3A0x244e3528ee1c8ec1!2sKardinaal%20Mercierplein%201%2C%203000%20Leuven%2C%20B%C3%A9lgica!5e0!3m2!1ses!2ses!4v1730389336113!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </article>
             </section>
 
-            
+            <section id="reservar">
+                <div>
+                    <h2> Reserva ahora </h2>
+                    <article>
+                        <label for="cantidad-personas">Personas: <span id="cantidad-display">1</span></label>
+                        <input type="range" id="cantidad-personas" name="cantidad-personas" value="1" min="1" max="20" id="inputRange" class="inputRange" oninput="actualizarCantidad(this.value)"/>
+                    </article>
+                    <article>
+                        <label for="hora">Dia: </label>
+                        <input type="date" id="day_selector" name="day_selector">
+                    </article>
+                    <article>
+                        <label for="hora">Hora: </label>
+                        <select id="timeSelector">
+                            <option value="03:00">03:00</option>
+                            <option value="03:30">03:30</option>
+                            <option value="04:00">04:00</option>
+                            <option value="04:30">04:30</option>
+                            <option value="05:00">05:00</option>
+                            <option value="05:30">05:30</option>
+                            <option value="06:00">06:00</option>
+                            <option value="06:30">06:30</option>
+                            <option value="07:00">07:00</option>
+                            <option value="07:30">07:30</option>
+                            <option value="08:00">08:00</option>
+                            <option value="08:30">08:30</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                        </select>
+                    </article>
+
+                    <button id="reservar_push"> Reservar </button>
+                </div>
+            </section>
+
+            <section id="review_wrapper">
+                <article id="review">
+                    <h2> Cuentanos sobre tu experiencia! </h2>
+                    <form action="">
+                        <div class="stars">
+                                <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">★</label>
+                        </div>
+
+                        <div>
+                            <input type="text" id="name" name="name" size="30" placeholder="Introduce tu nombre..."/>
+
+                            <textarea name="review" id="review_text" rows="4" cols="70" placeholder="Escribe aquí tu reseña..."></textarea>
+                        </div>
+                        <button id="valorar"> Publicar </button>
+                    </form>
+                </article>
+            </section>
+
         </main>
         <footer id="footer">
-            <p id="copyright"> COPYRIGHT © 2024 by Hugo Tubio Ferreiro </p>
+            <p id="copyright"> COPYRIGHT © 2024 por Hugo Tubio Ferreiro </p>
             <div> 
-                <a href="terminos_de_uso">Contactanos</a> 
+                <a href="terminos_de_uso">Terminos de Uso</a> 
                 <p>|</p> 
                 <a href="politica_de_privacidad">Politica de Privacidad</a> 
                 <p>|</p> 

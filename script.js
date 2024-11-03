@@ -25,10 +25,11 @@ changeBackgroundImage();
 
 setInterval(changeBackgroundImage, 10000); // Change image every 10 seconds
 
-// h2 fade-in
+
+// Fade-in-slide text
 window.onload = function() {
-  window.setTimeout(fadein, 2000);
-  window.setTimeout(fadeInSlide, 1500);
+  window.setTimeout(fadein, 1500);
+  window.setTimeout(fadeInSlide, 1000);
 }
 
 function fadein() {
@@ -43,4 +44,10 @@ function fadeInSlide() {
       fadeInSlides[i].style.transform = 'translateX(0)';
     }, i * 500);
   }
+}
+
+
+// Cantidad de personas
+function actualizarCantidad(valor) {
+  document.getElementById("cantidad-display").textContent = valor;
 }
