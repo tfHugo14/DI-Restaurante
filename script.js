@@ -51,3 +51,23 @@ function fadeInSlide() {
 function actualizarCantidad(valor) {
   document.getElementById("cantidad-display").textContent = valor;
 }
+
+// Push
+function push(){
+  let reservaName = document.getElementById("reserva_name")
+  let label = document.getElementById("reserva_name_label")
+  
+  if (reservaName.value == ""){
+    alert("el nombre de la reserva es un campo obligatorio!")
+    reservaName.style.border = '1px solid red'
+
+    label.innerText = 'Nombre*';
+    label.style.color = 'red'
+  } else {
+    alert("Reserva realizada correctamente!")
+    reservaName.style.border = '0'
+
+    label.innerText = 'Nombre';
+    label.style.color = '#E5DADA'
+  }
+}

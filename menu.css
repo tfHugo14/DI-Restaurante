@@ -8,7 +8,6 @@ body{
 
 #carta{
     background-color: #02040ff5;
-    height: 100%;
     margin: 2% 8% 2% 8%;
     border: 1px solid #E5DADA;
     border-radius: 20px;
@@ -33,4 +32,10 @@ body{
 
 #carta article{
     width: 80%;
+}
+
+#carta {}
+
+img{
+    width: 70%;
 }

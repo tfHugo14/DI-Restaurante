@@ -83,6 +83,14 @@
                 <div>
                     <h2> Reserva ahora </h2>
                     <article>
+                        <label for="cantidad-personas" id="reserva_name_label">Nombre: </label>
+                        <input type="text" id="reserva_name" name="name" size="30" placeholder="Nombre..."/>
+                    </article>
+                    <article>
+                        <label for="cantidad-personas">Teléfono: </label>
+                        <input type="text" id="reserva_phone" name="name" size="30" placeholder="Numero de teléfono..."/>
+                    </article>
+                    <article>
                         <label for="cantidad-personas">Personas: <span id="cantidad-display">1</span></label>
                         <input type="range" id="cantidad-personas" name="cantidad-personas" value="1" min="1" max="20" id="inputRange" class="inputRange" oninput="actualizarCantidad(this.value)"/>
                     </article>
@@ -112,7 +120,7 @@
                         </select>
                     </article>
 
-                    <button id="reservar_push"> Reservar </button>
+                    <button id="reservar_push" onclick="push()"> Reservar </button>
                 </div>
             </section>
 
