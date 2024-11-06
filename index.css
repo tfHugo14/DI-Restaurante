@@ -249,7 +249,7 @@ body{
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
 
         #menu a {
@@ -305,6 +305,35 @@ body{
             color: #840032;
         }
     /* -- */
+
+    /* about_us section */
+        .about_us {
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        #about_us h2 {
+            color: #840032;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #separator {
+            height: 4px;
+            width: 80px;
+            background-color: #840032;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+        
+        p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            margin-bottom: 30px;
+        }
 
     /* reservar section */
         #reservar{
