@@ -1,15 +1,15 @@
 body{
     margin: 0;
-    background-image: linear-gradient(0deg, rgba(2,4,15,1) 0%, rgba(2,4,15,0) 80%), url(img/dishes/food2.jpg);
+    background: linear-gradient(0deg, rgba(2, 4, 15, 1) 0%, rgb(2 4 15 / 90%) 80%);
     background-size: cover;
     background-position: center;
     color: #E5DADA;
 }
 
 #carta{
-    background-color: #02040ff5;
+    background-color: #02040f6c;
     margin: 2% 8% 2% 8%;
-    border: 1px solid #E5DADA;
+    border: 1px solid #02040f;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -19,23 +19,79 @@ body{
 
 #carta h1{
     text-align: center;
-    font-size: 3rem;
-    margin: 0;
-    border-bottom: 1px solid #E5DADA;
+    font-size: 4rem;
+    margin: 20px;
+    color: #840032;
 }
 
 #carta h2{
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
+    color: #840032;
     margin: 0;
 }
 
-#carta article{
-    width: 80%;
+#carta h3{
+    color: #840032;
+    font-size: 2.5rem;
 }
 
-#carta {}
+#carta article{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+#left, #right{
+    width: 65%;
+    border-bottom: 1px solid #E5DADA;
+}
+#left{align-self: start;}
+#right{align-self: end;}
+
+article > div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+article > div > div{
+    width: 55%;
+    font-size: large;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+article p:nth-child(2){
+    margin: 18px 18px 18px 0;
+    text-align: start;
+}
+
+article p:nth-child(3){
+    text-align: center;
+    font-style: italic;
+    margin: 18px 18px 18px 0;
+}
+
+#precio{
+    color: #840032;
+    text-align: end;
+    font-size: 2.5rem;
+    margin: 20px 0 20px 0;
+}
 
 img{
-    width: 70%;
+    min-width: 250px;
+    max-width: 20vw;
+    width: 20vw;
+    min-height: 270px;
+    height: 30vh;
+    max-height: 30vh;
+    border-radius: 200px;
+    transition: transform 0.3s ease;
+    margin-right: 20px;
+}
+
+img:hover{
+    transform: scale(1.05);
 }
