@@ -28,13 +28,13 @@ setInterval(changeBackgroundImage, 10000); // Change image every 10 seconds
 
 // Fade-in-slide text
 window.onload = function() {
-  window.setTimeout(fadein, 1500);
+  //window.setTimeout(fadein, 1500);
   window.setTimeout(fadeInSlide, 1000);
 }
 
-function fadein() {
-  document.getElementById('fade-in').style.opacity = '1';
-}
+  //function fadein() {
+  //  document.getElementById('fade-in').style.opacity = '1';
+  //}
 
 function fadeInSlide() {
   const fadeInSlides = document.getElementsByClassName('fade-in-slide');
@@ -46,6 +46,13 @@ function fadeInSlide() {
   }
 }
 
+// about us
+window.addEventListener('load', function() {
+  document.querySelector('.about_us').style.opacity = '1';
+  document.querySelector('#title_about_us').addEventListener('click', function() {
+      document.querySelector('.about_us').classList.toggle('active_about');
+  });
+});
 
 // Cantidad de personas
 function actualizarCantidad(valor) {
