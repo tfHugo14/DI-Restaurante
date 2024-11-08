@@ -51,6 +51,11 @@ body{
     margin: 0;
 }
 
+#carta h3{
+    color: #840032;
+    font-size: 2.5rem;
+}
+
 #carta article{
     width: 90%;
     display: flex;
@@ -82,7 +87,6 @@ article p:nth-child(2){
     margin: 18px 18px 18px 0;
     text-align: start;
 }
-
 article p:nth-child(3){
     text-align: center;
     font-style: italic;
